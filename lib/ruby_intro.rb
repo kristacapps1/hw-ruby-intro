@@ -113,12 +113,8 @@ class BookInStock
       @price = price
   end
 # Getters and Setters
-  def isbn
-      @isbn
-  end
-  def price
-      @price
-  end
+  attr_reader :price
+  attr_reader :isbn
   def isbn=(new_isbn)
       unless !(new_isbn.length == 0)
           raise ArgumentError.new("You cannot set an empty isbn")
